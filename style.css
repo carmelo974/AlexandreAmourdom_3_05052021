@@ -18,7 +18,7 @@
             box-shadow: 0px 5px 6px 0px #cfcfcf;
   }
   .localisation {
-    background-color: #cfcfcf;
+    background-color: rgb #c2c2c2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -29,6 +29,8 @@
         -ms-flex-align: center;
             align-items: center;
     height: 50px;
+    font-size: 16px;
+    font-weight: bolder;
   }
   .localisation .logo_icon {
     display: -webkit-box;
@@ -56,11 +58,11 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #eeeeee;
+    background-color: #f1f1f1;
     width: auto;
   }
   .presentation_restau .title_presentation {
-    font-weight: bold;
+    font-weight: 900;
     max-width: 250px;
     text-align: center;
   }
