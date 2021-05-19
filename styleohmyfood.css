@@ -13,37 +13,78 @@
     a{
         text-decoration: none;
     }
-    .loader{
-        border-top: 10px solid #9356DC;
-        border-bottom: 10px solid #FF79DA;
-        border-left: 10px solid #99E2D0;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
+    .loader_bar{
+        border: 2px solid black;
+        width: 99vw;
+        height: 50px;
+        margin: auto;
+        display: flex;
+        z-index: 1;
         margin: auto;
         position: fixed;
-        z-index: 1;
         top: 0; left: 0; right: 0; bottom: 0;
-        animation: spin 2s linear infinite;
-        animation-fill-mode: backwards;
-        animation: load 2s;
-        animation-duration: 10s;
-
+        
     }
-    @keyframes load{
-        0%   {opacity: 1;}
-        25% {opacity:0;}
-        50% {opacity: 1;}
-        100% {opacity:0;}
-    }
-    @keyframes spin {
+    @keyframes fadein{
         0% {
-            transform: rotate(0deg);
+            opacity:0;
         }
         100% {
-            transform: rotate(360deg);
+            opacity:1;
         }
-
+    }
+    .loader{
+        background: linear-gradient(#FF79DA,#9356DC);
+        width: 100%;
+        height: 100%;
+        transform-origin: left;
+        /*border-top: 5px solid #9356DC;
+        border-bottom: 5px solid #FF79DA;
+        border-left: 5px solid #99E2D0;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;*/
+        animation: progress 3s 1s;
+        overflow: hidden;
+        animation-fill-mode: backwards;
+        
+    }
+    span{
+        transform: translateY(0);
+        color: black;
+        font-weight: 900;
+        font-family: 'Shrikhand', cursive;
+        
+    }    
+    .loader span{
+        display: inline-block;
+        transform: translateX(170%) translateY(50%);
+        transition: transform 280ms ease-out 50ms;
+    }
+    @keyframes progress{
+    
+        /*transform: scaleX(3);
+        background-color: rgba(1, 28, 55, 1);*/
+        0%{
+            transform: scaleX(0);
+            opacity: .1;
+        }
+        17% {
+            transform: scaleX(.18);
+        }
+        24% {
+            transform: scaleX(.4);
+        }
+        46% {
+            transform: scaleX(.81);
+        }
+        85%,100% {
+            opacity: 1;
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
         
     }
     .header_logo{
@@ -197,30 +238,13 @@
         display: flex;
         justify-content: space-between;
     }
-    .icon_heart{
-        padding-top: 20px;
-        padding-right: 25px;
-        font-size: 25px;
-        color: grey;
-        z-index: 1;
-    }
-    .icon_heart::before{
-        content: "";
-        padding-top: 20px;
-        padding-right: 25px;
-        font-size: 25px;
-        color: grey;
-        background-color: hotpink;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-    }
-    .icon_heart:hover{
-        opacity: 1; 
-        background: #9356DC; 
-    }
+   
     .info_menu{
         padding: 10px;
+    }
+    .container_restaurants{
+        display: flex;
+        flex-direction: column;
     }
    
     .container_footer{
@@ -243,7 +267,7 @@
     .footer_bloc a{
         color: white;
     }
-}
+
 
 @media screen and (min-width: 601px) and (max-width: 991px){
     body {
@@ -585,10 +609,17 @@
         box-shadow: 5px 0px 10px 1px grey ;
     }
     .card_fonctionnement{
-        margin-left: 10px;
         display: flex;
-        flex-direction: row;
-    }     
+        flex-direction: column;
+    }
+    .title_process{
+        display: flex;
+        justify-content: center;
+    }
+    .process_restau{
+        display: flex;
+        justify-content: space-around;
+    }
     .title_card{
         font-weight: 900;
         }
@@ -630,6 +661,11 @@
         justify-content: center;
         align-items: center;
     }
+    .process_menu{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
     .choix_restau:hover{
         background: rgba(147, 86, 220, 0.2);
         cursor: pointer;
@@ -642,7 +678,7 @@
     }
    
     .card_menu_restaurant{
-        width: 85vw;
+        width: 40vw;
         height: auto;
         border-radius: 20px 20px;
         background-color: white;
@@ -706,6 +742,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        display: flex;
+        flex-direction: column;
     }
     .logo_footer a{
         color: white;

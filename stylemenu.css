@@ -51,15 +51,7 @@
     {
         font-weight: 400;
     }
-    .title_bloc h3::after {
-        content: "";
-        position: absolute;
-        background: #99e2d0;
-        width: 50px;
-        height: 5px;
-        left: 20px;
-        bottom: px;
-    }
+   
     .menu_board{
         padding-left: 10px;
         padding-right: 10px;
@@ -132,12 +124,28 @@
         transform: rotate(360deg)
 
     }
-    .barre{
-        border-bottom: 1px solid chartreuse;
+    .header_menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .icon_heart{
+        border: 2px solid black;
+        width: 30px;
+        position: absolute;
+    }
+    .icon_heart::before{
+        content: "";
+        position: relative;
+        background: #99e2d0;
+        width: 50px;
+        height: 5px;
+                
     }
     .menu_board_bloc{
-        margin-bottom: 30px;
-    }
+        margin-bottom: 30px;}
+        
     .btn{
         display: flex;
         justify-content: center;
@@ -227,18 +235,14 @@
     .title_menu{
         padding: 10px;
     }
+    .title_bloc_menu{
+        border-bottom: 5px solid #99e2d0 ;
+        width: 50px;
+        padding-bottom: 5px;
+    }
     .title_bloc h3
     {
         font-weight: 400;
-    }
-    .title_bloc h3::after {
-        content: "";
-        position: absolute;
-        background: #99e2d0;
-        width: 50px;
-        height: 5px;
-        left: 20px;
-        bottom: px;
     }
     .menu_board{
         padding-left: 10px;
@@ -246,7 +250,7 @@
     }
     #case{
         border-radius: 20px;
-        width: 350px;
+        width: auto;
         background-color: white;
         box-shadow: 0px 5px 6px 0px rgb(207, 207, 207);
         display: flex;
@@ -302,7 +306,7 @@
         transform: rotate(360deg)
 
     }
-    .barre{
+    .barre {
         border-bottom: 1px solid chartreuse;
     }
     .menu_board_bloc{
@@ -398,18 +402,14 @@
     .title_menu{
         padding: 10px;
     }
+    .title_bloc_menu{
+        border-bottom: 5px solid #99e2d0 ;
+        width: 50px;
+        padding-bottom: 5px;
+    }
     .title_bloc h3
     {
         font-weight: 400;
-    }
-    .title_bloc h3::after {
-        content: "";
-        position: absolute;
-        background: #99e2d0;
-        width: 50px;
-        height: 5px;
-        left: 20px;
-        bottom: px;
     }
     .menu_board{
         padding-left: 10px;
@@ -417,16 +417,16 @@
     }
     #case{
         border-radius: 20px;
-        width: 350px;
+        width: 30vw;
         background-color: white;
         box-shadow: 0px 5px 6px 0px rgb(207, 207, 207);
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 20px;
-        padding: 5px;
-        width: auto;
+        width: 95vw;
         flex-wrap: nowrap;
+        cursor: pointer;
     }
     .info_price{
         overflow: hidden;
@@ -440,8 +440,8 @@
     }
     .check {
         width: 0;
-        height: 70px;
-        background-color: rgba(1, 28, 55, 0);
+        height: 80px;
+        border-radius: 0px 20px 20px 0px;
         text-align: center;
         vertical-align: middle;
         display: flex;
@@ -473,7 +473,7 @@
         transform: rotate(360deg)
 
     }
-    .barre{
+    .barre {
         border-bottom: 1px solid chartreuse;
     }
     .menu_board_bloc{
