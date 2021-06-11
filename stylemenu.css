@@ -440,11 +440,11 @@
         top: 0;
         left: 0;
     }   
-    .icon_heart:active::before{
+    .icon_heart:hover::before{
         opacity: 1;
         text-decoration: none;
     }
-    .icon_heart:active .far{
+    .icon_heart:hover .far{
         opacity: 0;
         text-decoration: none;
     }
